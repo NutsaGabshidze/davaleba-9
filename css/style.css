@@ -1,0 +1,305 @@
+body {
+    background-color: #171717;
+    color: white;
+}
+
+.header_hero_content_container {
+    min-height: 500px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-top: 32px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+/* header START */
+.logo {
+    display: inline-block;
+    height: 153px;
+}
+
+.logo img {
+    object-fit: contain;
+    height: 100%;
+}
+
+.header_content {
+    height: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    display: block;
+}
+
+nav li:not(:last-child) {
+    margin-right: 55px;
+}
+
+nav a {
+    font-family: 'Gentium Book Basic';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.burger_btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    display: none;
+}
+
+/* header END */
+
+/* hero_content START */
+
+.hero_content {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    top: 0;
+    right: 0;
+}
+
+.hero_content_image {
+    width: 100%;
+    height: 100%;
+}
+
+.hero_content_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_content_text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    color: #c0b4b4;
+    bottom: 96px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1106px;
+    padding: 0 30px;
+}
+
+/* hero_contet END */
+
+/* articles START */
+.articles {
+    max-width: 1440px;
+    width: 100%;
+    background: #2a2626;
+    height: 610px;
+    padding: 96px 0;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.articles ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles li {
+    height: 320px;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.articles li:not(:last-child) {
+    margin-right: 122px;
+}
+
+.articles a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.articles img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* articles END */
+
+/* article start */
+article {
+    background-color: #0B0A0A;
+    height: 610px;
+    margin: o auto;
+    padding: 96px 125px;
+    position: relative;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.article_about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+}
+
+.article_about img {
+    display: flex;
+}
+
+.about_text {
+    display: flex;
+    width: 347px;
+    height: 126px;
+    position: absolute;
+    left: 770px;
+    top: 258px;
+    Font-size: 18px;
+}
+
+
+
+/* article end */
+
+footer {
+    max-width: 1440px;
+    width: 100%;
+    padding: 32px 125px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social_icons img:not(:last-child) {
+    margin-right: 49px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .header_content {
+        height: 76px;
+    }
+
+    .logo {
+        height: 76px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .burger_btn {
+        display: block;
+    }
+
+    .hero_content_text {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 30px;
+    }
+
+    .articles {
+        padding: 48px 0;
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    .articles li:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .articles {
+        height: unset;
+    }
+
+    .articles ul {
+        flex-direction: column;
+    }
+
+    .articles li {
+        flex-grow: unset;
+        flex-basis: unset;
+        width: 100%;
+        height: 400px;
+    }
+
+    .articles li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .article_about {
+        flex-direction: column;
+        flex-grow: unset;
+        flex-basis: unset;
+        width: 100%;
+        height: unset;
+        gap: 0;
+
+    }
+
+    .article_about img {
+        margin-bottom: 24px;
+
+    }
+
+    .about_text {
+        left: 60px;
+        top: 596px;
+    }
+
+
+
+    .logo_2 {
+        display: none;
+    }
+
+    .social_icons img:not(:last-child) {
+        margin-right: 10px;
+        display: inline-block;
+        flex-direction: row;
+        margin-top: 260px;
+    }
+}
